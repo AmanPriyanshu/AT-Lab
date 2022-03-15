@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="@color/black">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"/>
+    <TextView android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter Plain Text:"
+        android:textSize="20dp"
+        android:textColor="@color/white"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="25dp"/>
+    <EditText android:id="@+id/plain"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="@color/white"
+        android:layout_marginHorizontal="10dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter Shift Key:"
+        android:textSize="20dp"
+        android:textColor="@color/white"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="25dp"/>
+    <EditText android:id="@+id/key"
+        android:layout_width="match_parent"
+        android:inputType="number"
+        android:layout_height="30dp"
+        android:background="@color/white"
+        android:layout_marginHorizontal="10dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"/>
+    <Button android:id="@+id/btn_encrypt"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textSize="20sp"
+        android:text="SUBMIT"
+        tools:ignore="HardcodedText" />
+    <!-- More GUI components go here -->
+</LinearLayout>
