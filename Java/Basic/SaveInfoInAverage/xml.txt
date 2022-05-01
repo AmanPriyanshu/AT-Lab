@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:scrollbars="vertical"
+    android:id="@+id/lin_layout"
+    android:background="@color/black"
+    tools:context=".MainActivity">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:text="Student Details Form"
+        android:gravity="center"
+        android:textSize="20sp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:text=""
+        android:gravity="center"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:hint="Enter Semester"
+        android:id="@+id/sem_et"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:text=""
+        android:gravity="center"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:hint="Enter Subject Code"
+        android:id="@+id/code_et"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:text=""
+        android:gravity="center"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:hint="Enter Subject Name"
+        android:id="@+id/sub_et"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:text=""
+        android:gravity="center"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:hint="Enter Subject Credit"
+        android:id="@+id/credit_et"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:text=""
+        android:gravity="center"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:hint="Marks out of 100"
+        android:id="@+id/marks_et"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:text=""
+        android:gravity="center"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Grade"
+        android:background="@color/white"
+        android:id="@+id/grade_et"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:text=""
+        android:gravity="center"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:orientation="horizontal">
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/sub_btn"
+        android:text="Submit Subject"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/gpa"
+        android:text="Highest Grade"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/cgpa"
+        android:text="Cgpa"/>
+</LinearLayout>
+</LinearLayout>

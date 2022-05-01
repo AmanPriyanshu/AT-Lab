@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/black"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#FF3800"
+            android:text="REGISTER A NEW USER"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="32sp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="NAME:"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            android:layout_marginHorizontal="10dp"
+            tools:ignore="HardcodedText" />
+        <EditText
+            android:background="@color/white"
+            android:id = "@+id/edit_text"
+            android:layout_width = "match_parent"
+            android:layout_height="30dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_gravity = "center"
+            android:hint = "Enter your name"
+            android:inputType = "text" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="LOCATED IN MANIPAL?"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            android:layout_marginHorizontal="10dp"
+            tools:ignore="HardcodedText" />
+        <ToggleButton android:id="@+id/address"
+            android:background="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="GENDER:"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            android:layout_marginHorizontal="10dp"
+            tools:ignore="HardcodedText" />
+        <RadioGroup
+            android:id="@+id/gender"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:orientation="horizontal">
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Male"
+                android:textSize="20dp"
+                android:textColor="@color/white"
+                android:checked="true"
+            />
+            <TextView
+                android:layout_width="200dp"
+                android:layout_height="30dp"
+                />
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Female"
+                android:textSize="20dp"
+                android:textColor="@color/white"
+                />
+        </RadioGroup>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="AGE:"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            android:layout_marginHorizontal="10dp"
+            tools:ignore="HardcodedText" />
+        <EditText
+            android:background="@color/white"
+            android:id = "@+id/age"
+            android:layout_width = "match_parent"
+            android:layout_height="30dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_gravity = "center"
+            android:hint = "Enter your Age"
+            android:inputType = "number" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="Date of Birth:"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            android:layout_marginHorizontal="10dp"
+            tools:ignore="HardcodedText" />
+        <DatePicker
+            android:id="@+id/dob"
+            android:layout_marginHorizontal="15dp"
+            android:layout_width="match_parent"
+            android:background="@color/white"
+            android:layout_height="420dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="State:"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            android:layout_marginHorizontal="10dp"
+            tools:ignore="HardcodedText" />
+        <Spinner
+            android:id="@+id/state"
+            android:background="@color/white"
+            android:layout_marginHorizontal="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            />
+        <Button
+            android:id = "@+id/button"
+            android:layout_width = "wrap_content"
+            android:layout_height = "wrap_content"
+            android:layout_gravity = "center"
+            android:layout_marginTop = "16dp"
+            android:textSize="30dp"
+            android:text = "SUBMIT" />
+    </LinearLayout>
+</ScrollView>

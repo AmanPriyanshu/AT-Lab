@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#FF3800"
+            android:text="WELCOME A NEW USER"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="32sp"
+            tools:ignore="HardcodedText" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="NAME:"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            android:layout_marginHorizontal="10dp"
+            tools:ignore="HardcodedText" />
+        <EditText android:id="@+id/username"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="@color/white"
+            android:layout_marginHorizontal="20dp"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="PHONE NO:"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            android:layout_marginHorizontal="10dp"
+            tools:ignore="HardcodedText" />
+        <EditText android:id="@+id/phone"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="@color/white"
+            android:layout_marginHorizontal="20dp"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            />
+        <Button android:id="@+id/btn_SignIn"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="SUBMIT"
+            android:textSize="30dp"
+            />
+    </LinearLayout>
+</ScrollView>

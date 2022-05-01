@@ -1,0 +1,39 @@
+package com.example.myapplication;
+import androidx.appcompat.app.AppCompatActivity;
+import android.widget.EditText;
+import android.widget.Button;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Toast;
+import android.os.Bundle;
+public class MainActivity extends AppCompatActivity {
+    private EditText et_Username;
+    private EditText et_phone;
+    private Button btn_SignIn;
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        et_Username = (EditText) findViewById(R.id.username);
+        et_phone = (EditText) findViewById(R.id.phone);
+        btn_SignIn = (Button) findViewById(R.id.btn_SignIn);
+        btn_SignIn.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String username = String.valueOf(et_Username.getText());
+                String phone = String.valueOf(et_phone.getText());
+                if(phone.startsWith("+040") || phone.startsWith("+041") || phone.startsWith("+050") || phone.startsWith("+051") || phone.startsWith("+044")) {
+                    if (phone.length() == 12) {
+                        Toast ToastMessage = Toast.makeText(getApplicationContext(), "Welcome to the Home Page of "+username+" whose contact number is "+phone, Toast.LENGTH_LONG).show();
+                    }
+                    else{
+                        Toast.makeText(getApplicationContext(), "Please ensure the contact number has 7 digits after area code!", Toast.LENGTH_LONG).show();
+                    }
+                }
+                else{
+                    Toast.makeText(getApplicationContext(), "Please ensure the contact number has the correct area code", Toast.LENGTH_LONG).show();
+                }
+            }
+        });
+    }
+}

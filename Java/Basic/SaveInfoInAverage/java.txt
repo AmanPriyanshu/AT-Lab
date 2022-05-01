@@ -1,0 +1,75 @@
+package com.example.myapplication;
+import androidx.appcompat.app.AppCompatActivity;
+import android.graphics.Color;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.LinearLayout;
+import android.widget.Toast;
+public class MainActivity extends AppCompatActivity {
+    int i =0;
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        EditText etsem,etcode,etname,etcredit,etmarks,etgrade;
+        String[] sem= new String[5];
+        String[] code= new String[5];
+        String[] name= new String[5];
+        String[] credit= new String[5];
+        String[] marks= new String[5];
+        String[] grade= new String[5];
+        int[] marks_int = new int[5];
+        Button submit,hg,cgpa;
+        submit = findViewById(R.id.sub_btn);
+        etsem = findViewById(R.id.sem_et);
+        etcode = findViewById(R.id.code_et);
+        etname = findViewById(R.id.sub_et);
+        etcredit = findViewById(R.id.credit_et);
+        etmarks = findViewById(R.id.marks_et);
+        etgrade = findViewById(R.id.grade_et);
+        submit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                sem[i] = etsem.getText().toString();
+                code[i] = etcode.getText().toString();
+                name[i] = etname.getText().toString();
+                credit[i] = etcredit.getText().toString();
+                marks[i] = etmarks.getText().toString();
+                grade[i] = etgrade.getText().toString();
+                marks_int[i] = Integer.parseInt(marks[i])/10;
+                i = i+1;
+            }
+        });
+        hg = findViewById(R.id.gpa);
+        hg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                int max_index = 0;
+                for(int i=0; i<5; i++){
+                    if(marks_int[max_index]<marks_int[i]){
+                        max_index = i;
+                    }
+                }
+                Toast.makeText(getApplicationContext(),"Highest Grade is: "+grade[max_index]+" in Subject Code: "+code[max_index],Toast.LENGTH_SHORT).show();
+            }
+        });
+        cgpa = findViewById(R.id.cgpa);
+        LinearLayout ll;
+        ll = findViewById(R.id.lin_layout);
+        cgpa.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                float cgpa_val = 0;
+                for(int i=0; i<5; i++){
+                    cgpa_val += 1.0*marks_int[i];
+                }
+                cgpa_val /=5;
+                String cgpa_str = Float.toString(cgpa_val);
+                Toast.makeText(getApplicationContext(),"CGPA is: "+cgpa_str,Toast.LENGTH_SHORT).show();
+                ll.setBackgroundColor(Color.parseColor("#0000FF"));
+            }
+        });
+    }
+}
